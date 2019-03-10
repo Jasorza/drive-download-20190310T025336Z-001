@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <title>DOM Completo</title>
+    <style>
+        form{
+            font-size: 36px;
+            margin: 20px;
+        }
+        input{
+            margin-left: 10px;
+            font-size: 32px;
+            width: 300px;
+            border-bottom: 3px solid crimson;
+            border-top: 0 #FFF solid;
+            border-left: 0 #FFF solid;
+            border-right: 0 #FFF solid;
+            -webkit-transition: width .35s ease-in-out;
+            transition: width .35s ease-in-out;
+        }
+        button{
+            padding: 20px;
+            border-radius: 10px;
+            margin-left: 10px;
+            font-size: 32px;
+            width: 300px;
+        }
+        input[type=text]:focus{
+            width: 350px;
+            border-bottom: 8px solid rgba(220, 20, 60, 0.486);
+            outline:0px;
+           
+        }
+        .icon{
+            color: rgba(220, 20, 60, 0.486);
+        }
+
+        #resultado{
+            border: 8px dotted rgba(220, 20, 60, 0.486);
+            width: 400px;
+            height: 500px;
+            float: left;
+            
+
+        }
+
+        #formulario{
+            float: left;
+        }
+
+         #formulario label span.obligatorio{
+            display: none;
+            color:#777;
+            
+        } 
+        
+        
+       
+    </style>
+</head>
+<body>
+        <h1>DOM Eventos y funciones JS</h1>
+        <div id = "formulario">
+                <form action="#"   id="formRegister" onsubmit="metFormulario.valFormCompleto()">
+            
+                        <p>
+                            <i class="fas fa-user-alt icon"> </i>
+                            <input class="validar" type="text" placeholder="Ingrese nombre 2 caracteres, máximo 6. Caracteres alfabéticos" id="name">
+                            <label for="name"><span class="obligatorio" >*Campo Obligatorio</span></label>
+                            
+                        </p>
+                        <p>
+                            <i class="fas fa-file-signature icon"> </i>
+                            <input class="validar" type="password" placeholder="Escriba su contraseña con mínimo 8 caracteres y debe incluir letras en mayúscula, en minúscula y números" id="password">
+                            <label for="password"><span class="obligatorio">*Campo Obligatorio</span></label>
+                            
+                        </p>
+                        <p>
+                            <i class="fas fa-birthday-cake icon"></i>
+                            <input class="validar" type="text" placeholder="Ingrese la edad" id="age">
+                            <label for="age"><span class="obligatorio">*Campo Obligatorio</span></label>
+                        </p>
+                        <p>
+                            <i class="fas fa-birthday-cake icon"> </i>
+                            <input class="validar" type="date" id="dateIni">
+                            <label for="dateIni"><span class="obligatorio">*Campo Obligatorio</span></label>
+                            
+                        </p>
+                        <p>
+                            <label id="labelEnviar"></label>
+                            <button type="submit"><i class="fas fa-birthday-cake icon"></i> Enviar</button>
+                            
+                        </p>
+                        
+     
+        
+                </form>
+        </div>
+
+    <script src="js/completoDom.js"></script>
+</body>
+</html>
